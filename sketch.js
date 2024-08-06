@@ -8,10 +8,13 @@ let shrinkStartTime = null;
 let shrinking = false;
 
 function setup() {
+  console.log("Setting up p5.js sketch");
   let canvas = createCanvas(800, 800, WEBGL);
   canvas.parent('p5-canvas'); // 将Canvas附加到特定的div
-    
+  console.log("Canvas created and parent set");
+
   createMetaballShader();
+  console.log("Metaball shader created");
 
   let bigBall = new Ball(width / 2, height / 2, originalBigBallSize, true);
   let smallBall = new Ball(random(width), random(height), 20);
